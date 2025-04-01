@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
@@ -69,6 +70,47 @@ function Navbar() {
                 </b>{" "}
                 {text}
               </span>
+            </Link>
+          ))}
+        </nav>
+      </div>
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-white mr-6"
+        >
+          {isMenuOpen ? (
+            <img src={"/assets/shared/icon-close.svg"} alt="closing icon" />
+          ) : (
+            <img src={"/assets/shared/icon-hamburger.svg"} alt="closing icon" />
+          )}
+        </button>
+      </div>
+      <div
+        className={`md:hidden fixed top-0 right-0 h-screen w-screen bg-[#0B0D17] text-white transform transition-transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-10 right-5 text-white"
+        >
+          <img src={"/assets/shared/icon-close.svg"} alt="closing icon" />
+        </button>
+
+        <nav className="flex flex-col items-center mt-20 space-y-6 text-xl">
+          {navData.map(({ id, text, link }) => (
+            <Link
+              key={id}
+              href={link}
+              className={`px-4 py-2 w-full text-center text-white hover:text-gray-300 ${
+                pathname.startsWith(link)
+                  ? "border-r-3  border-white"
+                  : "opacity-100"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <b className="pr-1 ">0{id}</b> {text}
             </Link>
           ))}
         </nav>
