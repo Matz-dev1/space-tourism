@@ -22,41 +22,41 @@ function Navbar() {
   const navData = [
     {
       id: 0,
-      text: "Home",
+      text: "HOME",
       link: "/",
     },
     {
       id: 1,
-      text: "Destination",
+      text: "DESTINATION",
       link: "/Destination",
     },
     {
       id: 2,
-      text: "Crew",
+      text: "CREW",
       link: "/Crew",
     },
     {
       id: 3,
-      text: "Technology",
+      text: "TECHNOLOGY",
       link: "/Technology",
     },
   ];
   return (
     <div className="w-full flex flex-row justify-between pt-[35px]">
-      <div className="pl-12 flex shrink-0">
+      <div className="pl-12 flex shrink-0 py-2">
         <Link href="/">
           <img src="/assets/shared/logo.svg" alt="Logo" className="w-16 h-16" />
         </Link>
       </div>
-      <div className="md:flex items-center justify-center md:max-w-[65%] md:min-w-[55%] lg:max-w-[55%] lg:w-[55%]  bg-white/10 backdrop-blur-lg text-white xs:hidden">
+      <div className="md:flex items-center justify-center md:w-[700px] md:max-w-4/5 lg:max-w-[52%] lg:w-[52%] lg:min-w-[700px]  bg-white/5 backdrop-blur-lg text-white xs:hidden">
         <nav className="">
           {navData.map(({ id, text, link }) => (
             <Link
               key={id}
               href={link}
-              className={`lg:mx-[31px] md:mx-[22px] ${
-                pathname.startsWith(link)
-                  ? "border-b-3 pb-5 border-white"
+              className={`lg:mx-[31px] lg:px-0 md:mx-[22px] md:px-2 ${
+                pathname === link
+                  ? "border-b-3 pb-7 border-white"
                   : "opacity-100"
               }`}
             >
@@ -98,12 +98,12 @@ function Navbar() {
           <img src={"/assets/shared/icon-close.svg"} alt="closing icon" />
         </button>
 
-        <nav className="flex flex-col items-center mt-20 space-y-6 text-xl">
+        <nav className="flex flex-col justify-between  mt-20 space-y-6 text-xl">
           {navData.map(({ id, text, link }) => (
             <Link
               key={id}
               href={link}
-              className={`px-4 py-2 w-full text-center text-white hover:text-gray-300 ${
+              className={`px-4 py-2 pl-[30%] w-full text-start justify-between text-white hover:text-gray-300 ${
                 pathname.startsWith(link)
                   ? "border-r-3  border-white"
                   : "opacity-100"

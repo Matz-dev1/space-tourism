@@ -7,7 +7,7 @@ function HomePage() {
       <div>
         <Navbar />
       </div>
-      <div className="flex lg:flex-row xs:flex-col lg:justify-start xs:text-center lg:text-start xs:align-middle md:justify-center md:text-center lg:w-[80%] lg:min-w-[1024px] md:min-w-[768px]  md:w-[80%] m-auto xs:gap-20 md:gap-2 lg:mt-80 md:mt-60 xs:min-w-[320px] pb-20 xs:mt-20">
+      <div className="flex lg:flex-row xs:flex-col lg:justify-start xs:text-center lg:text-start xs:align-middle md:justify-center md:text-center lg:w-[80%] lg:max-w-[1024px] md:max-w-[768px]  md:w-[80%] m-auto xs:gap-20 md:gap-2 lg:mt-80 md:mt-60 xs:min-w-[320px] pb-20 xs:mt-20">
         <div className="flex flex-col lg:w-[500px] md:w-[100%] xs:w-[100%] xs:mb-20 md:mb-20 md:px-32 xs:px-8 lg:pl-0 lg:pr-0 text-white">
           <p className="md:text-[28px] xs:text-[16px] md:tracking-[4px] xs:tracking-[15%]">
             SO, YOU WANT TO TRAVEL TO
