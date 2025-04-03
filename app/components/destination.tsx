@@ -83,8 +83,8 @@ function Destination() {
         <div className="flex flex-col gap-6 text-start justify-center items-start w-4/5 m-auto">
           <div className="xs:m-auto md:m-0">
             <p className="tracking-[4px] text-white lg:text-[28px] md:text-[20px] xs:text-[16px] font-barlowCondensed">
-              <b className="tracking-[4.72px] opacity-25 pr-6">01</b>PICK YOUR
-              DESTINATION
+              <b className="tracking-[4.72px] text-gray-800 pr-6">01</b>PICK
+              YOUR DESTINATION
             </p>
           </div>
           <div className="flex lg:max-w-full lg:flex-row xs:flex-col lg:py-20 md:py-10 xs:py-0 lg:gap-[32px] md:gap-6 xs:gap-[32px] xs:items-center xs:justify-center xs:text-center lg:justify-start lg:text-start lg:items-start">

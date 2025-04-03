@@ -87,7 +87,7 @@ function Navbar() {
         </button>
       </div>
       <div
-        className={`md:hidden fixed top-0 right-0 h-screen w-screen bg-[#0B0D17] text-white transform transition-transform ${
+        className={`md:hidden fixed top-0 right-0 h-screen w-screen bg-[#000] text-white transform transition-transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -104,9 +104,7 @@ function Navbar() {
               key={id}
               href={link}
               className={`px-4 py-2 pl-[30%] w-full text-start justify-between text-white hover:text-gray-300 ${
-                pathname.startsWith(link)
-                  ? "border-r-3  border-white"
-                  : "opacity-100"
+                pathname === link ? "border-r-3  border-white" : "opacity-100"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >

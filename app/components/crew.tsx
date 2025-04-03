@@ -71,8 +71,8 @@ function Crew() {
         <div className="flex flex-col gap-6 text-start justify-center items-start lg:w-4/5 xs:w-full m-auto">
           <div className="xs:m-auto md:m-0">
             <p className="tracking-[4px] text-white lg:text-[28px] md:text-[20px] xs:text-[16px] font-barlowCondensed">
-              <b className="tracking-[4.72px] opacity-25 pr-6">02</b>MEET YOUR
-              CREW
+              <b className="tracking-[4.72px] text-gray-800 pr-6">02</b>MEET
+              YOUR CREW
             </p>
           </div>
           <div className=" flex lg:max-w-full m-auto lg:h-[734px] lg:flex-row-reverse xs:flex-col-reverse lg:my-0 md:py-0 xs:py-0 lg:gap-[32px] md:gap-6 xs:gap-[32px] xs:items-center xs:justify-center xs:text-center lg:text-start lg:items-center">
@@ -91,7 +91,7 @@ function Crew() {
             </div>
             <div className=" flex flex-col lg:w-1/2  xs:w-full text-white lg:px-0 md:px-0 xs:mt-16 lg:my-0 gap-[40px] xs:px-6 lg:justify-between lg:h-[734px] ">
               <div className="flex flex-col gap-10 lg:justify-center lg:my-auto lg:h-auto xs:px-12 lg:px-0">
-                <p className="opacity-50 lg:text-[32px] md:text-[24px] xs:text-[18px] ">
+                <p className="text-gray-500 lg:text-[32px] md:text-[24px] xs:text-[18px] ">
                   {data.find((item) => item.id === selectedId)?.job}
                 </p>
                 <h1 className="lg:text-[56px] md:text-[40px] xs:text-[24px]">
