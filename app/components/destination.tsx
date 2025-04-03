@@ -83,18 +83,18 @@ function Destination() {
         <div className="flex flex-col gap-6 text-start justify-center items-start w-4/5 m-auto">
           <div className="xs:m-auto md:m-0">
             <p className="tracking-[4px] text-white lg:text-[28px] md:text-[20px] xs:text-[16px] font-barlowCondensed">
-              <b className="tracking-[4.72px] opacity-25 pr-3">01</b>PICK YOUR
+              <b className="tracking-[4.72px] opacity-25 pr-6">01</b>PICK YOUR
               DESTINATION
             </p>
           </div>
           <div className="flex lg:max-w-full lg:flex-row xs:flex-col lg:py-20 md:py-10 xs:py-0 lg:gap-[32px] md:gap-6 xs:gap-[32px] xs:items-center xs:justify-center xs:text-center lg:justify-start lg:text-start lg:items-start">
-            <div className="lg:w-1/2 xs:w-full lg:py-0 xs:py-8 lg:px-6 lg:min-w-[480px]">
+            <div className="lg:w-1/2 xs:w-full lg:py-0 xs:py-8 lg:px-6">
               <img
                 src={data.find((item) => item.id === selectedId)?.src}
-                className="xs:m-auto md:w-[300px] md:h-[300px] lg:w-[480px] lg:h-[480px] xs:w-[150px] xs:h-[150px] lg:mx-4 lg:max-w-[480px]"
+                className="xs:m-auto md:w-[300px] md:h-[300px] lg:w-[100%] lg:h-auto xs:w-[150px] xs:h-[150px] lg:mx-4 lg:max-w-[480px]"
               />
             </div>
-            <div className="flex flex-col lg:w-[49%]  xs:w-full text-white lg:px-6 md:px-[40px] md:mt-5 lg:mt-0 gap-10 xs:px-6">
+            <div className="flex flex-col lg:w-1/2  xs:w-full text-white lg:px-6 md:px-[40px] md:mt-5 lg:mt-0 gap-10 xs:px-6">
               <div className="flex gap-8 xs:justify-center lg:justify-start">
                 {planetsData.map(({ id, name }) => (
                   <button
